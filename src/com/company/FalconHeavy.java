@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class FalconHeavy extends Spaceport {
+public class FalconHeavy extends Rocket {
 
     public FalconHeavy(String rocket) {
         super(rocket);
@@ -27,6 +27,6 @@ public class FalconHeavy extends Spaceport {
 
     @Override
     public void start() {
-        System.out.println("Запуск ракеты");
+        System.out.println("Ракета пошла...");
     }
 }

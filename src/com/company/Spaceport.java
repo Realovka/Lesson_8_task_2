@@ -1,38 +1,33 @@
 package com.company;
 
-public abstract class Spaceport {
 
-    private String rocket;
+public class Spaceport {
 
-    public Spaceport(String rocket) {
+    private Rocket rocket;
+
+    public Spaceport(Rocket rocket) {
         this.rocket = rocket;
     }
 
-    public String getRocket() {
+    public Rocket getRocket() {
         return rocket;
     }
 
-    public void setRocket(String rocket) {
+    public void setRocket(Rocket rocket) {
         this.rocket = rocket;
     }
 
-    public abstract boolean preLaunchCheck();
-
-    public abstract void startEngine();
-
-    public abstract void start();
-
-    public void startRocket(Spaceport a){
-        boolean result = preLaunchCheck();
+    public void startRocket(Rocket rocket){
+        boolean result = rocket.preLaunchCheck();
         if (result) {
-            startEngine();
+            rocket.startEngine();
             for (int i=9; i>=0; i--){
                 System.out.println(i);
             }
-            start();
+            rocket.start();
 
         } else {
-            System.out.println("Предстартовая проверка "+rocket+" не пройдена");
+            System.out.println("Предстартовая проверка "+rocket.getRocket()+" не пройдена");
         }
     }
 }

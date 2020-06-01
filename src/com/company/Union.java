@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Union extends Spaceport {
+public class Union extends Rocket {
 
     public Union(String rocket) {
         super(rocket);

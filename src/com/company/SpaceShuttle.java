@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Random;
 
-public class SpaceShuttle extends Spaceport {
+public class SpaceShuttle extends Rocket {
 
     public SpaceShuttle(String rocket) {
         super(rocket);
